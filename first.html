@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PRIYADHARSHINI.S</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: blue;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    hr {
+      margin: 30px 0;
+    }
+    img.profile {
+      float: right;
+      margin: 0 0 20px 20px;
+      border-radius: 10px;
+    }
+    #responseMessage {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>PRIYADHARSHINI.S</h1>
+  <img src="pic.jpg" alt="My Photo" width="200" class="profile">
+
+  <nav>
+    <a href="#bio">Bio</a>
+    <a href="#education">Education</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <hr>
+
+  <h2 id="bio">👤 About Me</h2>
+  <p>Hi! I'm a web enthusiast who loves clean code & creative projects. I believe in learning & growing 🌱.</p>
+
+  <hr>
+
+  <h2 id="education">🎓 Academic Background</h2>
+  <table>
+    <tr><th>Year</th><th>Institution</th><th>Degree</th></tr>
+    <tr><td>2020</td><td>AV High School</td><td>High School</td></tr>
+    <tr><td>2023</td><td>Alagappa University</td><td>Bachelor of Science</td></tr>
+  </table>
+
+  <hr>
+
+  <h2 id="hobbies">🎨 Hobbies</h2>
+  <ul>
+    <li>Reading</li>
+    <li>Photography</li>
+    <li>Coding</li>
+    <li>Traveling</li>
+  </ul>
+
+  <hr>
+
+  <h2 id="contact">📬 Contact Me</h2>
+  <form id="contactForm">
+    <label>Name:<br>
+      <input type="text" name="name" required>
+    </label><br><br>
+
+    <label>Email:<br>
+      <input type="email" name="email" required>
+    </label><br><br>
+
+    <label>Message:<br>
+      <textarea name="message" rows="5" cols="30" required></textarea>
+    </label><br><br>
+
+    <input type="submit" value="Send">
+  </form>
+
+  <p id="responseMessage"></p>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const response = document.getElementById('responseMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent actual form submission
+      response.textContent = 'Thank you! Your message has been received. 😊';
+      form.reset(); // Clear form inputs
+    });
+  </script>
+
+</body>
+</html>
