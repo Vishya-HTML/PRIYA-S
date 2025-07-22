@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing Table</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background-color: #f0f2f5;
+      padding: 40px;
+    }
+    .pricing-table {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .pricing-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      padding: 30px;
+      width: 300px;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .pricing-card:hover {
+      transform: scale(1.05);
+    }
+    .plan-title {
+      font-size: 1.6em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .plan-price {
+      font-size: 2.2em;
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+    .features {
+      list-style: none;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .features li {
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .button {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    @media (max-width: 768px) {
+      .pricing-table {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="pricing-table">
+    <!-- Basic Plan -->
+    <div class="pricing-card">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">Rs.1000</div>
+      <ul class="features">
+        <li>1 User</li>
+        <li>5 Projects</li>
+        <li>Email Support</li>
+      </ul>
+      <button class="button" onclick="choosePlan('Basic')">Choose Plan</button>
+    </div>
+    <!-- Pro Plan -->
+    <div class="pricing-card">
+      <div class="plan-title">Pro</div>
+      <div class="plan-price">Rs.20000</div>
+      <ul class="features">
+        <li>5 Users</li>
+        <li>Unlimited Projects</li>
+        <li>Priority Email Support</li>
+      </ul>
+      <button class="button" onclick="choosePlan('Pro')">Choose Plan</button>
+    </div>
+    <!-- Enterprise Plan -->
+    <div class="pricing-card">
+      <div class="plan-title">Enterprise</div>
+      <div class="plan-price">Rs.100000</div>
+      <ul class="features">
+        <li>Unlimited Users</li>
+        <li>Advanced Analytics</li>
+        <li>24/7 Support</li>
+      </ul>
+      <button class="button" onclick="choosePlan('Enterprise')">Choose Plan</button>
+    </div>
+  </div>
+  <script>
+    function choosePlan(planName) {
+      alert(`You selected the ${planName} Plan!`);
+       window.location.href = `signup-${planName.toLowerCase()}.html`;
+    }
+  </script>
+</body>
+</html>
